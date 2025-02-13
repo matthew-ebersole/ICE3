@@ -24,3 +24,8 @@ If any of the `assert` statements fail then GHDL will cease the simulation and e
 Assert statements of other severity levels will be reported, but not fail the workflow.
 
 ![Waveform of the Ripple Adder](WaveformICE3.png)
+![Sketch of Basy3 Implementation](Sketch.pdf)
+
+## Documentation
+LtCol Trimble helped me understand the errors in Vivado to better troubleshoot.
+
