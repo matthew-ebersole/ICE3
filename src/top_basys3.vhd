@@ -74,6 +74,17 @@ begin
     A    <= sw(4 downto 1);   -- sw[4:1] as first operand
     B    <= sw(15 downto 12); -- sw[15:12] as second operand
     Cin  <= sw(0);            -- sw[0] as carry-in
+    
+        -- Instantiate ripple adder
+    ripple_adder_inst: ripple_adder
+        port map(
+            A   => A,
+            B   => B,
+            Cin => Cin,
+            S   => S,
+            Cout => Cout
+        );
+     
 	---------------------------------
 	-- CONCURRENT STATEMENTS --------
 	led(14 downto 4) <= (others => '0'); -- Ground unused LEDs
